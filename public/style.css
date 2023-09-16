@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    color: aliceblue;
+}
+.main-heading{
+    font-size: 120%;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 200%;
+}
+.bookEntry{
+    width: 50%;
+    background-color: #292727;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    padding-top: 0.5rem;
+}
+.main-Container{
+    text-align: center;
+}
+.book-input{
+    width: 80%;
+    height: 120%;
+    font-size: 120%;
+    text-align: center;
+    transition-delay: 100ms;
+    transition-duration: 100ms;
+    margin-bottom: 0.5rem;
+    background-color: rgb(171, 179, 186);
+    border-radius: 5px;
+}
+.book-input:hover{
+    background-color: rgb(255, 255, 255);
+}
+.submit{
+    background-color: aliceblue;
+    border: 2px solid red;
+    border-radius: 5px;
+    transition-duration: 100ms;
+    transition-delay: 100ms;
+    margin-bottom: 1rem;
+}
+.submit:hover{
+    background-color: blue;
+    color: aliceblue;
+    border: 2px solid white;
+}
+.issued-Books{
+    background-color:#292727 ;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.returned-books{
+    background-color:#292727 ;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.card-issued-book,
+.card-returned-book{
+    background-color: #d0d0d0;
+    color: black;
+    border-radius: 10px;
+    width: 20%;
+    margin: auto;
+    display: inline-block;
+    margin-left: 1rem;
+    margin-left: 1rem;
+    transition-duration: 50ms;
+    transition-delay: 50ms;
+    margin-top: 1rem;
+}
+.card-issued-book:hover,
+.card-returned-book:hover{
+    background-color: white;
+    color: #292727;
+    cursor: grabbing;
+}
+.IssOn{
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-align: left;
+    margin-left: 1rem;
+    color: #0e51ee;
+    font-size: 120%;
+}
+p{
+    margin-top: 3px;
+    margin-left: 3px;
+}
+.issue-fine,
+.returned-fine{
+    padding: 0;
+    margin: 0;
+    color: #f9421d;
+}
+.return-button{
+    background-color: #e4e9e4;
+    border: 2px solid rgb(255, 37, 37);
+    border-radius: 5px;
+    transition-duration: 50ms;
+    transition-delay: 50ms;
+    margin: 10px;
+}
+.return-button:hover{
+    background-color: aqua;
+}
+.card-returned-book{
+    padding-bottom: 0.5rem;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-heading">
+        <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+    </div>
+    <div class="main-container">
+        <form id="bookEntry" class="bookEntry" action="/bookEntry" method="POST">
+            <h2>Issue A Book</h2>
+            <input class="book-input" type="text" name="title" placeholder="Enter Book Name"><br>
+            <button class="submit" type="submit">Issue Book</button>
+        </form>
+        <div id ='issued-Books' class="issued-Books">
+            <h1 class="issued-books-section-heading">Issued Books</h1>
+            <hr>
+        </div>
+        <div id="returned-books" class="returned-books">
+            <h1 class="returned-books-section-heading">Returned Books</h1>
+            <hr>
+        </div>
+    </div>
+</body>
+</html>
