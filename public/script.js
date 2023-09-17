@@ -10,9 +10,55 @@ document.addEventListener('DOMContentLoaded',()=>{
             alert('Please Enter Book Title');
         }
     })
+    document.getElementById('issued-Books').addEventListener('click',e=>{
+        let targetId = e.target.parentElement.children[0].value;
+        let fine= e.target.parentElement.children[1].value;
+        if(fine>0 && e.target.className=='return-button'){
+            e.preventDefault();
+            let card=e.target.parentElement.parentElement;
+            card.innerHTML='';
+            let heading = document.createElement('h2');
+            heading.className='issued-book-title';
+            heading.innerHTML='Please Pay Fine';
+            card.appendChild(heading);
+            let form = document.createElement('form');
+            form.action='/returnBook';
+            form.method='POST';
+            let idfield = document.createElement('input');
+            idfield.type='hidden';
+            idfield.name='returnId';
+            idfield.value=targetId;
+            form.appendChild(idfield);
+            let fineInp = document.createElement('input');
+            fineInp.type='text';
+            fineInp.name='fine';
+            fineInp.value=fine;
+            fineInp.className='pay-fine';
+            fineInp.setAttribute('readonly','true')
+            form.appendChild(fineInp);
+            let btn = document.createElement('button');
+            btn.type='submit';
+            btn.className='pay';
+            btn.innerHTML='PayNow';
+            form.appendChild(btn);
+            card.appendChild(form);
+            card.style='margin-top:0.5rem'
+        }
+
+    })
 })
 
 function showIssuedBooks(books){
+    let sectionHeading = document.createElement('h1');
+    sectionHeading.innerHTML='Issued Books';
+    document.getElementById('issued-Books').appendChild(sectionHeading);
+    let hr = document.createElement('hr');
+    document.getElementById('issued-Books').appendChild(hr);
+    let sectionHeading2 = document.createElement('h1');
+    sectionHeading2.innerHTML='Returned Books';
+    document.getElementById('returned-books').appendChild(sectionHeading2);
+    let hr2 = document.createElement('hr');
+    document.getElementById('returned-books').appendChild(hr2);
     for(let book of books){
         if(!book.returnedOn){
             let currentTime = Date.now();

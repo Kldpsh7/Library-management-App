@@ -26,6 +26,7 @@ module.exports.getIssuedBooks =(req,res,next)=>{
 }
 
 module.exports.postReturn = (req,res,next)=>{
+    console.log(req.body)
     Book.findByPk(req.body.returnId)
     .then(book=>{
         book.returnedOn=Date.now();

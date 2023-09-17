@@ -126,3 +126,24 @@ p{
 .card-returned-book{
     padding-bottom: 0.5rem;
 }
+.pay{
+    border: 2px solid #005f24;
+    font-size: 200%;
+    border-radius: 10px;
+    background-color: white;
+    margin: 2rem;
+}
+.pay:hover{
+    border: 2px solid #c43214;
+    background-color: rgb(26, 42, 147);
+    color: white;
+}
+.pay-fine{
+    background-color: #636060;
+    border-radius: 5px;
+    font-size: 200%;
+    font-weight: bold;
+    text-align: center;
+    margin: 2rem;
+    width: 8rem;
+}
